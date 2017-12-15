@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab830104ce91d467bb7c70fa9f23b600, type: 3}
+  m_Name: CardBank
+  m_EditorClassIdentifier: 
+  myCards:
+  - myType: 0
+    myPrefab: {fileID: 1705913002277086, guid: c516873f3fffb46c797c1a6ccd13dea3, type: 2}
+  - myType: 1
+    myPrefab: {fileID: 1705913002277086, guid: 0c48bddbf3b2b4892b3ea47579595b78, type: 2}
+  - myType: 2
+    myPrefab: {fileID: 1705913002277086, guid: 50ef65af3f99049afacd2ae3c8f1938b, type: 2}

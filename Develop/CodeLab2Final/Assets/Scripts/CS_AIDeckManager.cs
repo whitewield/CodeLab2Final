@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CS_AIDeckManager : CS_DeckManager {
 	// Use this for initialization
-	protected void Generate_Deck(){
+	public void Generate_Deck(){
 		//Create a Shuffle Deck to draw card 
 		List<GameObject> shuffleDeck = new List<GameObject>();
-		for(int i= 0;i<myBank.cardInfos.Length;i++){
-			shuffleDeck.Add(myBank.cardInfos[i].myPrefab);
+		for(int i= 0;i<myBank.myCards.Length;i++){
+			shuffleDeck.Add(myBank.myCards[i].myPrefab);
 		}
 
 		//Create a flag to keep track of which card is drawn

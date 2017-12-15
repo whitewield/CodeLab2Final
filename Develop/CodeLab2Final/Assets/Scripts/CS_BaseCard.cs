@@ -4,10 +4,12 @@ using UnityEngine;
 using Global;
 
 public class CS_BaseCard : MonoBehaviour {
-	[SerializeField] SO_CardInfo myCardInfo;
-	[SerializeField] CardAttributes myCurrentAttributes;
-	private int myCurrentHP;
-	private float myNextActionTime;
+	protected CS_TeamManager myTeamManager;
+	[SerializeField] protected SO_CardInfo myCardInfo;
+	[SerializeField] protected CardAttributes myCurrentAttributes;
+	protected int myCurrentHP;
+	protected float myNextActionTime;
+	protected bool isInitialized = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,9 @@ public class CS_BaseCard : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!isInitialized)
+			return;
+
 		//if current time is bigger than my next action time
 		if (myNextActionTime > Time.timeSinceLevelLoad) {
 			myNextActionTime += myCurrentAttributes.CD; // update the next action time
@@ -23,7 +28,8 @@ public class CS_BaseCard : MonoBehaviour {
 		}
 	}
 
-	public void Init () {
+	public void Init (CS_TeamManager g_teamManager) {
+		myTeamManager = g_teamManager;
 		myCurrentAttributes = myCardInfo.myAttributes;
 		myCurrentHP = myCurrentAttributes.HP;
 		myNextActionTime = myCurrentAttributes.CD + Time.timeSinceLevelLoad;
@@ -33,12 +39,18 @@ public class CS_BaseCard : MonoBehaviour {
 		
 	}
 
-	public virtual void TakeDamage (int g_damage) {
-		myCurrentHP -= g_damage;
-		if (myCurrentHP <= 0) {
-			// check if dead
-			myCurrentHP = 0;
-			Destroy (this.gameObject);
+	public virtual void TakeDamage (int g_damage, float g_acc) {
+		float t_chance = Random.Range (0f, 1f);
+		if (t_chance < g_acc) {
+			Debug.Log ("hit");
+			myCurrentHP -= g_damage;
+			if (myCurrentHP <= 0) {
+				// check if dead
+				myCurrentHP = 0;
+				Destroy (this.gameObject);
+			}
+		} else {
+			Debug.Log ("miss");
 		}
 	}
 

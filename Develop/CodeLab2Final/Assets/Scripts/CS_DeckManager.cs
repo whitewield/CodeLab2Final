@@ -6,7 +6,7 @@ using Global;
 public class CS_DeckManager : MonoBehaviour {
 	[SerializeField] protected int DeckSize;
 	[SerializeField] protected SO_CardBank myBank;
-	protected List<GameObject> myDeck;
+	protected List<GameObject> myDeck = new List<GameObject> ();
 	protected void Start(){
 		DontDestroyOnLoad(this.gameObject);
 	}

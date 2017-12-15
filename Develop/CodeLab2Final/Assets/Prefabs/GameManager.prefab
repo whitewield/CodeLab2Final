@@ -317,8 +317,15 @@ MonoBehaviour:
   - {fileID: 4550230250460974}
   - {fileID: 4727716072170634}
   myField_Left_Deck: {fileID: 4308206684473620}
-  myField_Light_Cards:
+  myField_Right_Cards:
   - {fileID: 4481840894423652}
   - {fileID: 4809953826207780}
   - {fileID: 4694515211626058}
-  myField_Light_Deck: {fileID: 4321865140936314}
+  myField_Right_Deck: {fileID: 4321865140936314}
+  myTeamManagerPrefab: {fileID: 1798527378704034, guid: 2d27029c2a4d64758b6a3eafa2b91d90,
+    type: 2}
+  myAIDeckManagerPrefab: {fileID: 1007884666081408, guid: 52f4368c157c54ded8fd526b05425ad4,
+    type: 2}
+  myDeckManagers:
+  - {fileID: 0}
+  - {fileID: 0}
