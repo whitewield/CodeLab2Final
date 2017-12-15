@@ -4,10 +4,10 @@ using Global;
 
 [CreateAssetMenu(fileName = "CardBank", menuName = "CodeLab2/CardBank", order = 1)]
 public class SO_CardBank : ScriptableObject {
-	public CardInfo[] myBank;
+	public CardInfo[] cardInfos;
 
 	public Sprite GetSprite (CardType g_type) {
-		foreach (CardInfo f_info in myBank) {
+		foreach (CardInfo f_info in cardInfos) {
 			if (f_info.myType == g_type) {
 				return f_info.myPrefab.GetComponent<SpriteRenderer> ().sprite;
 			}
@@ -16,7 +16,7 @@ public class SO_CardBank : ScriptableObject {
 	}
 
 	public GameObject GetPrefab (CardType g_type) {
-		foreach (CardInfo f_info in myBank) {
+		foreach (CardInfo f_info in cardInfos) {
 			if (f_info.myType == g_type) {
 				return f_info.myPrefab;
 			}
