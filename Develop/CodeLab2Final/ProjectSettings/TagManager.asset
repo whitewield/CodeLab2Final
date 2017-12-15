@@ -38,6 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2264713915
+    locked: 0
+  - name: DownEffects
+    uniqueID: 3003498181
+    locked: 0
+  - name: Player
+    uniqueID: 4011543197
+    locked: 0
+  - name: UpEffects
+    uniqueID: 3873500791
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3696188455
     locked: 0

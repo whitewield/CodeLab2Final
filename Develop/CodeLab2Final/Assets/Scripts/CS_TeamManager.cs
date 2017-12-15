@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Global;
 
-public class CS_DeckManager : MonoBehaviour {
-	[SerializeField] protected SO_CardBank myBank;
-	protected List<CS_BaseCard> myDeck;
+public class CS_TeamManager : MonoBehaviour {
+	[SerializeField] CS_BaseCard[] myBattleCards = new CS_BaseCard[Constants.NUMBER_BATTLECARDS];
+	private CS_DeckManager myDeckManager;
 	// Use this for initialization
 	void Start () {
 		
