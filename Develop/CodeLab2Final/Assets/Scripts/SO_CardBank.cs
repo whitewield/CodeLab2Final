@@ -15,7 +15,7 @@ public class SO_CardBank : ScriptableObject {
 		return null;
 	}
 
-	public Sprite GetPrefab (CardType g_type) {
+	public GameObject GetPrefab (CardType g_type) {
 		foreach (CardInfo f_info in myBank) {
 			if (f_info.myType == g_type) {
 				return f_info.myPrefab;
