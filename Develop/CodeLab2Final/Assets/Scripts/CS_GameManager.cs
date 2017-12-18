@@ -59,4 +59,8 @@ public class CS_GameManager : MonoBehaviour {
 	public CS_TeamManager GetOpponentTeamManager (CS_TeamManager g_teamManager) {
 		return myTeamManagers [1 - myTeamManagers.IndexOf (g_teamManager)];
 	}
+
+	public CS_DeckManager GetDeckManager (int g_index) {
+		return myDeckManagers [g_index];
+	}
 }

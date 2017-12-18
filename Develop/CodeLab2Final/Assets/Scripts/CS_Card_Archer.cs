@@ -13,8 +13,13 @@ public class CS_Card_Archer : CS_BaseCard {
 		if (t_enemyCount == 0)
 			return;
 
-		//get a random enemy
-		int t_targetIndex = Random.Range (0, t_enemyCount);
-		t_opponentTeam.TakeDamage (t_targetIndex, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
+		//damage the first enemy
+		t_opponentTeam.TakeDamage (0, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
+
+		//play particle
+		ParticleSystem t_particle =
+			PoppingParticlePoolManager.Instance.GetFromPool (Hang.PoppingParticlePool.ParticleType.MageAttack);
+		t_particle.transform.position = this.transform.position;
+		t_particle.Play();
 	}
 }

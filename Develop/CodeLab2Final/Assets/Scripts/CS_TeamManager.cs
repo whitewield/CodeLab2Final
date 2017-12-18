@@ -71,5 +71,41 @@ public class CS_TeamManager : MonoBehaviour {
 	public void TakeDamage (int g_cardIndex, int g_damage, float g_acc) {
 		myBattleCards [g_cardIndex].TakeDamage (g_damage, g_acc);
 	}
-		
+
+	public int GetIndex (CS_BaseCard g_card) {
+		for (int i = 0; i < myBattleCards.Length; i++) {
+			if (myBattleCards [i] == g_card) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public bool SwapCards (CS_BaseCard g_card, Direction g_direction) {
+		int t_index = GetIndex (g_card);
+
+		if (t_index < 0 || t_index >= GetBattleCardsCount ()) {
+			return false;
+		}
+
+		int t_swapIndex = -1;
+		switch (g_direction) {
+		case Direction.Forward:
+			t_swapIndex = t_index - 1;
+			break;
+		case Direction.Back:
+			t_swapIndex = t_index + 1;
+			break;
+		}
+
+		if (t_swapIndex < 0 || t_swapIndex >= GetBattleCardsCount ()) {
+			return false;
+		}
+
+		CS_BaseCard t_card = myBattleCards [t_index];
+		myBattleCards [t_index] = myBattleCards [t_swapIndex];
+		myBattleCards [t_swapIndex] = t_card;
+
+		return true;
+	}
 }

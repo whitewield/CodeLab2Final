@@ -194,8 +194,10 @@ GameObject:
   m_Component:
   - component: {fileID: 253114346}
   - component: {fileID: 253114347}
+  - component: {fileID: 253114348}
+  - component: {fileID: 253114349}
   m_Layer: 0
-  m_Name: Circle (1)
+  m_Name: BattleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,6 +260,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &253114348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253114345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce00f05a44ef4eafb55a65f8b549360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButtonSpriteRenderer: {fileID: 0}
+  myOverColor: {r: 1, g: 1, b: 1, a: 1}
+  myPressedColor: {r: 1, g: 1, b: 1, a: 1}
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1561160758}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: CS_Button+PT_ButtonEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!61 &253114349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253114345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.84, y: 3.05}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.84, y: 3.05}
+  m_EdgeRadius: 0
 --- !u!1 &616133939
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 616133941}
   - component: {fileID: 616133940}
+  - component: {fileID: 616133942}
+  - component: {fileID: 616133943}
   m_Layer: 0
   m_Name: Btn_Mage
   m_TagString: Untagged
@@ -331,6 +390,137 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616133942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616133939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d365eeb869d441dafbc514ca266902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButtonSpriteRenderer: {fileID: 0}
+  myOverColor: {r: 1, g: 1, b: 1, a: 1}
+  myPressedColor: {r: 1, g: 1, b: 1, a: 1}
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CS_Button+PT_ButtonEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  myType: 1
+  myDeckManager: {fileID: 0}
+--- !u!61 &616133943
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616133939}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1484375, y: 3.265625}
+    newSize: {x: 2.1484375, y: 3.265625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1484375, y: 3.265625}
+  m_EdgeRadius: 0
+--- !u!1 &1149467620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1149467621}
+  - component: {fileID: 1149467623}
+  - component: {fileID: 1149467622}
+  m_Layer: 0
+  m_Name: Text_DeckCount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149467621
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1149467620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1561160757}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!102 &1149467622
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1149467620}
+  m_Text: 1
+  m_OffsetZ: 0
+  m_CharacterSize: 0.4
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 32
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4282557155
+--- !u!23 &1149467623
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1149467620}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1434867935
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +611,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1548943846}
   - component: {fileID: 1548943845}
+  - component: {fileID: 1548943847}
+  - component: {fileID: 1548943848}
   m_Layer: 0
   m_Name: Btn_Archer
   m_TagString: Untagged
@@ -485,6 +677,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548943847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548943844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d365eeb869d441dafbc514ca266902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButtonSpriteRenderer: {fileID: 0}
+  myOverColor: {r: 1, g: 1, b: 1, a: 1}
+  myPressedColor: {r: 1, g: 1, b: 1, a: 1}
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CS_Button+PT_ButtonEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  myType: 2
+  myDeckManager: {fileID: 0}
+--- !u!61 &1548943848
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548943844}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1484375, y: 3.265625}
+    newSize: {x: 2.1484375, y: 3.265625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1484375, y: 3.265625}
+  m_EdgeRadius: 0
 --- !u!1 &1554417443
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +732,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1554417445}
   - component: {fileID: 1554417444}
+  - component: {fileID: 1554417446}
+  - component: {fileID: 1554417447}
   m_Layer: 0
   m_Name: Btn_Knight
   m_TagString: Untagged
@@ -558,6 +798,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554417446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554417443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d365eeb869d441dafbc514ca266902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButtonSpriteRenderer: {fileID: 0}
+  myOverColor: {r: 1, g: 1, b: 1, a: 1}
+  myPressedColor: {r: 1, g: 1, b: 1, a: 1}
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CS_Button+PT_ButtonEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  myType: 0
+  myDeckManager: {fileID: 0}
+--- !u!61 &1554417447
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554417443}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1484375, y: 3.265625}
+    newSize: {x: 2.1484375, y: 3.265625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1484375, y: 3.265625}
+  m_EdgeRadius: 0
 --- !u!1 &1561160755
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,8 +853,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1561160757}
   - component: {fileID: 1561160756}
+  - component: {fileID: 1561160759}
+  - component: {fileID: 1561160758}
+  - component: {fileID: 1561160760}
   m_Layer: 0
-  m_Name: Btn_Mage (3)
+  m_Name: Btn_Deck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +916,166 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1149467621}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1561160758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561160755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533d67292f31045c5bd13497da31b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText_Count: {fileID: 1149467622}
+  myDeckManager: {fileID: 0}
+--- !u!114 &1561160759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561160755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce00f05a44ef4eafb55a65f8b549360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButtonSpriteRenderer: {fileID: 0}
+  myOverColor: {r: 1, g: 1, b: 1, a: 1}
+  myPressedColor: {r: 1, g: 1, b: 1, a: 1}
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1748943324}
+        m_MethodName: ClearDeck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: CS_Button+PT_ButtonEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!61 &1561160760
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561160755}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1484375, y: 3.265625}
+    newSize: {x: 2.1484375, y: 3.265625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1484375, y: 3.265625}
+  m_EdgeRadius: 0
+--- !u!1001 &1748943323
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639716776507826, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5668241a2de0642159f6c96ba167b7ff, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1748943324 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114489819684338502, guid: 5668241a2de0642159f6c96ba167b7ff,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748943323}
+  m_Script: {fileID: 11500000, guid: 79284963fb91441f6a3472e8f6a9355c, type: 3}
+--- !u!1001 &1774741445
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689757783989200, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1d8b7a3e9793b4bf4864fd1494e39ce5, type: 2}
+  m_IsPrefabParent: 0

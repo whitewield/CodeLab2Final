@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212906721185897336}
   - component: {fileID: 114778158453784074}
   m_Layer: 0
-  m_Name: CardMage
+  m_Name: CardMage_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,9 @@ MonoBehaviour:
     DMG: 0
     ACC: 0
     CD: 0
+  myInfoDisplayPrefab: {fileID: 1437930417732204, guid: 8a390b57e814c451caebe1911e8f804c,
+    type: 2}
+  myInfoDisplayPostion: {x: 0, y: -2, z: 0}
 --- !u!212 &212906721185897336
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -92,7 +95,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 99e0b3719ac6f498db207adff357687d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6486fc62ee7c4d63afe40f9e57f93a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

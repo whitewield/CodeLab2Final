@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e594fadf704471085fdebdafc965aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeckSize: 9
+  DeckSize: 6
   myBank: {fileID: 11400000, guid: abf09404585c444c88543a58672ce78b, type: 2}

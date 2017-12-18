@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: CardInfo_Knight
   m_EditorClassIdentifier: 
   myAttributes:
-    HP: 10
-    DMG: 3
+    HP: 20
+    DMG: 2
     ACC: 0.8
     CD: 2

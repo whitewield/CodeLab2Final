@@ -17,5 +17,11 @@ public class CS_Card_Mage : CS_BaseCard {
 		int t_targetIndex = Random.Range (0, t_enemyCount);
 		t_opponentTeam.TakeDamage (t_targetIndex, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
 
+		//play particle
+		ParticleSystem t_particle =
+			PoppingParticlePoolManager.Instance.GetFromPool (Hang.PoppingParticlePool.ParticleType.MageAttack);
+		t_particle.transform.position = this.transform.position;
+		t_particle.Play();
+
 	}
 }

@@ -39,6 +39,11 @@ namespace Global {
 		Archer
 	}
 
+	public enum Direction {
+		Forward,
+		Back
+	}
+
 	public class Constants {
 		public const int NUMBER_BATTLECARDS = 3;
 
