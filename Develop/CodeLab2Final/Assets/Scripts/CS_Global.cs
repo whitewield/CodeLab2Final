@@ -28,7 +28,7 @@ namespace Global {
 	}
 
 	[System.Serializable]
-	public struct CardInfo {
+	public struct Card {
 		public CardType myType;
 		public GameObject myPrefab;
 	}
@@ -39,7 +39,16 @@ namespace Global {
 		Archer
 	}
 
+	public enum Direction {
+		Forward,
+		Back
+	}
+
 	public class Constants {
 		public const int NUMBER_BATTLECARDS = 3;
+
+		public const string NAME_PLAYER_DECK_MANAGER = "PlayerDeckManager";
+
+		public const float SPEED_CARD_MOVE = 5;
 	}
 }

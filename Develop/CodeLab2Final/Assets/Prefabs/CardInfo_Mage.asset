@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: CardInfo_Mage
   m_EditorClassIdentifier: 
   myAttributes:
-    HP: 16
-    DMG: 3
-    ACC: 0.8
-    CD: 2
+    HP: 12
+    DMG: 8
+    ACC: 0.7
+    CD: 5

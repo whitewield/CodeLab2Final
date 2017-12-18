@@ -6,12 +6,12 @@ using Global;
 public class CS_DeckManager : MonoBehaviour {
 	[SerializeField] protected int DeckSize;
 	[SerializeField] protected SO_CardBank myBank;
-	protected List<GameObject> myDeck;
+	protected List<GameObject> myDeck = new List<GameObject> ();
 	protected void Start(){
 		DontDestroyOnLoad(this.gameObject);
 	}
 	//Add One card into deck
-	protected bool AddCard(CardType cardType){
+	public bool AddCard(CardType cardType){
 		int num = myDeck.Count;
 
 		//If the deck has enough cards then return false
@@ -38,5 +38,9 @@ public class CS_DeckManager : MonoBehaviour {
 	//Check if the deck is empty
 	public bool IF_DeckIsEmpty(){
 		return myDeck.Count == 0;
+	}
+
+	public int GetDeckCount (){
+		return myDeck.Count;
 	}
 }
