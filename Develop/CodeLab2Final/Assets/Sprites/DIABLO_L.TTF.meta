@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 93be4648a07e14ad8b0f25e8cd930e2b
-timeCreated: 1513303529
+guid: a2ba3ea691da74783a690e4c3a196b24
+timeCreated: 1513621787
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
@@ -13,7 +13,8 @@ TrueTypeFontImporter:
   fontName: Diablo
   fontNames:
   - Diablo
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 93be4648a07e14ad8b0f25e8cd930e2b, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
