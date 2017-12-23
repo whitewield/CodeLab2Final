@@ -50,5 +50,7 @@ namespace Global {
 		public const string NAME_PLAYER_DECK_MANAGER = "PlayerDeckManager";
 
 		public const float SPEED_CARD_MOVE = 5;
+
+		public const float HEIGHT_ABILITY = 3;
 	}
 }

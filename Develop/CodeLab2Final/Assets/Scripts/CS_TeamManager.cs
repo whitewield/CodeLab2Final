@@ -68,7 +68,13 @@ public class CS_TeamManager : MonoBehaviour {
 		return t_count;
 	}
 
+	public Vector3 GetPosition (int g_index) {
+		return myField_Cards [g_index].position;
+	}
+
 	public void TakeDamage (int g_cardIndex, int g_damage, float g_acc) {
+		if (myBattleCards [g_cardIndex] == null)
+			return;
 		myBattleCards [g_cardIndex].TakeDamage (g_damage, g_acc);
 	}
 

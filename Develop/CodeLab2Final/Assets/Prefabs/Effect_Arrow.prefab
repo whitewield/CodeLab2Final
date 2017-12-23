@@ -36,8 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4745703654957588}
   - component: {fileID: 212913007595419868}
+  - component: {fileID: 114831981337223260}
   m_Layer: 0
-  m_Name: Effect_ArrowArrow
+  m_Name: Effect_Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684868109116760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.26, y: -1.22, z: 0}
+  m_LocalPosition: {x: 3.26, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513174303317316}
@@ -163,6 +164,36 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114831981337223260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684868109116760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15013c6700ebb4a02a19c6c1163c912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDuration: 0.5
+  myHeightOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 4.0587006
+      outSlope: 4.0587006
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: -3.906491
+      outSlope: -3.906491
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!212 &212913007595419868
 SpriteRenderer:
   m_ObjectHideFlags: 1

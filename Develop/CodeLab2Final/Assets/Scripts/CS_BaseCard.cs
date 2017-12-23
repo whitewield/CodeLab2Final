@@ -14,6 +14,8 @@ public class CS_BaseCard : MonoBehaviour {
 	[SerializeField] Vector3 myInfoDisplayPostion = new Vector3 (0, -2, 0);
 	protected TextMesh myTextMesh_Info;
 
+	[SerializeField] protected GameObject myAbilityPrefab;
+
 	// Use this for initialization
 	void Start () {
 	}

@@ -20,13 +20,15 @@ public class CS_Card_Knight : CS_BaseCard {
 		if (t_enemyCount == 0)
 			return;
 
-		//damage the first enemy
-		t_opponentTeam.TakeDamage (0, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
+		//damage the first enemy 
+		CS_Ability t_ability = Instantiate (myAbilityPrefab).GetComponent<CS_Ability> ();
+		t_ability.transform.position = this.transform.position;
+		t_ability.Init (t_opponentTeam, 0, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
 
-		//play particle
-		ParticleSystem t_particle =
-			PoppingParticlePoolManager.Instance.GetFromPool (Hang.PoppingParticlePool.ParticleType.MageAttack);
-		t_particle.transform.position = this.transform.position;
-		t_particle.Play();
+//		//play particle
+//		ParticleSystem t_particle =
+//			PoppingParticlePoolManager.Instance.GetFromPool (Hang.PoppingParticlePool.ParticleType.MageAttack);
+//		t_particle.transform.position = this.transform.position;
+//		t_particle.Play();
 	}
 }

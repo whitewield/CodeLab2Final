@@ -61,6 +61,9 @@ MonoBehaviour:
   myInfoDisplayPrefab: {fileID: 1437930417732204, guid: 8a390b57e814c451caebe1911e8f804c,
     type: 2}
   myInfoDisplayPostion: {x: 0, y: -2, z: 0}
+  myAbilityPrefab: {fileID: 1462850712402786, guid: f41552b8250144d90a45c6b5e64edb6c,
+    type: 2}
+  myScaleX: 1
 --- !u!212 &212906721185897336
 SpriteRenderer:
   m_ObjectHideFlags: 1

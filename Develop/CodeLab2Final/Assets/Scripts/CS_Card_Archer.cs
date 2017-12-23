@@ -13,13 +13,15 @@ public class CS_Card_Archer : CS_BaseCard {
 		if (t_enemyCount == 0)
 			return;
 
-		//damage the first enemy
-		t_opponentTeam.TakeDamage (0, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
+		//damage the first enemy 
+		CS_Ability_Projectile t_ability = Instantiate (myAbilityPrefab, this.transform.position, Quaternion.identity).GetComponent<CS_Ability_Projectile> ();
+		t_ability.Init (t_opponentTeam, 0, myCurrentAttributes.DMG, myCurrentAttributes.ACC);
+		t_ability.InitCurve (this.transform.position, t_opponentTeam.GetPosition (0));
 
-		//play particle
-		ParticleSystem t_particle =
-			PoppingParticlePoolManager.Instance.GetFromPool (Hang.PoppingParticlePool.ParticleType.MageAttack);
-		t_particle.transform.position = this.transform.position;
-		t_particle.Play();
+//		//play particle
+//		ParticleSystem t_particle =
+//			PoppingParticlePoolManager.Instance.GetFromPool (Hang.PoppingParticlePool.ParticleType.MageAttack);
+//		t_particle.transform.position = this.transform.position;
+//		t_particle.Play();
 	}
 }
